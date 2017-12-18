@@ -9,7 +9,7 @@ import { UserService } from '../user.service';
   selector: 'app-feed',
   templateUrl: './feed.component.html',
   styleUrls: ['./feed.component.css'],
-  providers: [FeedService]
+  providers: [FeedService, UserService]
 })
 export class FeedComponent implements OnInit {
 

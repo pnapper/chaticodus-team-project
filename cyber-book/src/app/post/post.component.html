@@ -1,3 +1,42 @@
-<p>
-  post works!
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Normal Posting</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>User Name:</label>
+        <br>
+        <input #newUsername>
+      </div>
+
+      <div>
+        <label>Type:</label>
+        <br>
+        <input #newType>
+      </div>
+
+      <div>
+        <label>Status:</label>
+        <br>
+        <textarea #newStatus></textarea>
+      </div>
+
+      <div>
+        <label>Response:</label>
+        <br>
+        <input #newResponse>
+      </div>
+      <button class = "btn btn-info" (click)="submitForm(
+        newUsername.value,
+        newType.value,
+        newStatus.value,
+        newResponse.value);
+        newUsername.value='';
+        newType.value='';
+        newStatus.value='';
+        newResponse.value='';">Post</button>
+
+    </div>
+  </div>
+</div>
