@@ -1,3 +1,14 @@
-<p>
-  feed works!
-</p>
+<div *ngFor="let post of posts | async" class="panel panel-default">
+  <div class="panel-body">
+    <div *ngIf="post.type == 'music'">
+      {{post.username}}
+      listening
+      {{post.response[0]}}
+    </div>
+    <div *ngIf="post.type == 'normal'">
+      {{post.username}}
+      <br>
+      {{post.response[0]}}
+    </div>
+  </div>
+</div>

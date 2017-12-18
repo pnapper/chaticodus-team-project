@@ -17,7 +17,7 @@ export class PostComponent implements OnInit {
   ngOnInit() {
   }
   submitForm(username: string, type: string, status: string, response: string) {
-    var newPost: Posts = new Posts(username, type, status, response);
-    this.feedService.addPost(newPost);
+    var newPost: Posts = new Posts(username, type, status, [response]);
+    this.feedService.addNormalPost(newPost);
   }
 }
