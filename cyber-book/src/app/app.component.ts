@@ -8,7 +8,22 @@ import { AuthenticationService } from './authentication.service';
   providers: [AuthenticationService]
 })
 export class AppComponent {
-  user;
+  private isLoggedIn: Boolean;
+  private userName: String;
+
+
+  // constructor(public authService: AuthenticationService) {
+  //   this.authService.user.subscribe(user =>  {
+  //     if (user == null) {
+  //       this.isLoggedIn = false;
+  //       this.router.navigate(['public']);
+  //     } else {
+  //       this.isLoggedIn = true;
+  //       this.userName = user.displayName;
+  //       this.router.navigate([]);
+  //     }
+  //   });
+  // }
 
   constructor(public authService: AuthenticationService) {
     this.authService.user.subscribe(user =>  {
@@ -23,4 +38,5 @@ export class AppComponent {
   logout() {
     this.authService.logout();
   }
+
 }

@@ -15,6 +15,9 @@ import { ImagePostComponent } from './image-post/image-post.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { PublicComponent } from './public/public.component';
+import { PrivateComponent } from './private/private.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -31,7 +34,9 @@ export const firebaseConfig = {
     PostComponent,
     MusicPostComponent,
     MoviePostComponent,
-    ImagePostComponent
+    ImagePostComponent,
+    PublicComponent,
+    PrivateComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +44,8 @@ export const firebaseConfig = {
     HttpModule,
     routing,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
