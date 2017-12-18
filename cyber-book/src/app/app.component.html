@@ -1,12 +1,18 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" routerLink="">Cyber Book</a>
+      <a class="navbar-brand" routerLink="">CodeAbode</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
       //login
-      <app-post></app-post>
-      <app-feed></app-feed>
+      <div *ngIf="true">
+        <app-post></app-post>
+        <app-feed></app-feed>
+      </div>
+      <div *ngIf="false">
+        <app-welcome></app-welcome>
+      </div>
+
     </ul>
   </div>
 </nav>
