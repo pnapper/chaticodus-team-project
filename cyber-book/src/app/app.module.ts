@@ -18,6 +18,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { PublicComponent } from './public/public.component';
 import { PrivateComponent } from './private/private.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -36,7 +38,8 @@ export const firebaseConfig = {
     MoviePostComponent,
     ImagePostComponent,
     PublicComponent,
-    PrivateComponent
+    PrivateComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

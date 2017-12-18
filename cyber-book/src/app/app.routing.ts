@@ -6,11 +6,11 @@ import { PostComponent } from './post/post.component';
 
 const appRoutes: Routes = [
   {
-    path: '',
+    path: 'login',
     component: LoginComponent
   },
   {
-    path: 'feed',
+    path: '',
     component: FeedComponent
   }
 ];
