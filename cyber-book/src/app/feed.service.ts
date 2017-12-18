@@ -10,8 +10,11 @@ export class FeedService {
   constructor(private database: AngularFireDatabase) {
     this.posts = database.list('posts');
 }
+    getPosts(){
+      return this.posts;
+    }
 
-  addPost(newPost: Posts) {
+  addNormalPost(newPost: Posts) {
     this.posts.push(newPost);
   }
 }
