@@ -19,13 +19,15 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { PublicComponent } from './public/public.component';
 import { PrivateComponent } from './private/private.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-
+import { AuthGuard } from './auth-guard.service';
+import { AuthenticationService } from './authentication.service';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
   authDomain: masterFirebaseConfig.authDomain,
   databaseURL: masterFirebaseConfig.databaseURL,
-  storageBucket: masterFirebaseConfig.storageBucket
+  storageBucket: masterFirebaseConfig.storageBucket,
+  messagingSenderId: masterFirebaseConfig.messagingSenderId
 };
 
 @NgModule({
@@ -50,7 +52,7 @@ export const firebaseConfig = {
     AngularFireDatabaseModule,
     AngularFireAuthModule,
   ],
-  providers: [],
+  providers: [AuthGuard, AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

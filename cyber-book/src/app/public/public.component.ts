@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import * as firebase from 'firebase';
+import * as firebase from "firebase";
 
 @Component({
   selector: 'app-public',
@@ -12,6 +12,7 @@ export class PublicComponent {
   constructor() {}
 
   ngDoCheck() {
-    this.user = firebase.auth().currentUser;
-  }
+  this.user = firebase.auth().currentUser;
+  console.log(this.user);
+}
 }

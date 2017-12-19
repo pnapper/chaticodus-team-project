@@ -1,0 +1,13 @@
+a:hover {
+  cursor:pointer;
+  text-decoration:underline;
+}
+
+li {
+  color:blue;
+
+}
+
+li:hover {
+    text-decoration:underline;
+}
