@@ -1,18 +1,17 @@
 <div *ngFor="let movie of childMovie.results | slice:0:3; let i = index">
   <div *ngIf="childValue[0]">
-    <p (click)="clickedMovieSearch(movie.title)">{{movie.title}}</p>
+    <p (click)="clickedMovieSearch(movie.title, movie.artist_name)">{{movie.title}}</p>
   </div>
 </div>
 
 <div *ngIf="childValue[1] && type == 'movie'">
     <p>I am watching to {{responses[0]}}<p>
-    <label>Username:</label>
-    <input #newUser>
+    <label>Username: {{childUser}}</label><br>
+    <!-- <input #newUser> -->
     <label>Status:</label>
     <textarea #newStatus></textarea>
     <button class="btn btn-info" (click) = "postMovieSearch(
-          newUser.value,
+          childUser,
           newStatus.value);
-          newUser.value='';
           newStatus.value='';">post</button>
 </div>
