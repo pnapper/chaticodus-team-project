@@ -1,0 +1,38 @@
+<button routerLink="app-sign-up">Create New Account</button>
+
+<div class="row columns">
+  <button (click)="login()" *ngIf="!(user | async)?.uid">Anonymous Login</button>
+  <button (click)="logout()" *ngIf="(user | async)?.uid">Logout</button>
+  <br>
+
+  <input type="text" id="message" *ngIf="(user | async)?.uid" placeholder="What is it that you do?" (keyup.enter)="Send($event.target.value)" [(ngModel)]="msgVal" />
+  <div id="details-container">
+      <p *ngFor="let item of items | async">{{item.message}}</p>
+  </div>
+</div>
+
+<div class="sign-in">
+  <h3>Log in to existing account:</h3>
+  <form (submit)="loginUser($event)">
+    <div class="input">
+      <label>Email:</label>
+      <input type="text">
+    </div>
+    <div class="input">
+      <label>Password:</label>
+      <input type="password">
+    </div>
+    <div class="input">
+      <button type="submit">Login</button>
+    </div>
+  </form>
+</div>
+
+<div class="welcome">
+  <h3>You are signed in as: {{userId}}</h3>
+</div>
+<div class="container">
+
+  <app-music-post></app-music-post>
+  <app-feed></app-feed>
+</div>
