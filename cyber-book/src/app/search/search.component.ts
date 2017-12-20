@@ -16,7 +16,7 @@ export class SearchComponent implements OnInit {
   @Input() childMusic;
   @Input() childValue;
   @Input() childUser;
-  type: string;
+  type: string = "music";
   responses: string[];
 
   constructor(private router: Router, private userService: UserService, private feedService: FeedService) { }
@@ -27,7 +27,6 @@ export class SearchComponent implements OnInit {
   clickedMusicSearch(title: string, name: string){
     this.childValue[0] = false;
     this.childValue[1] = true;
-    this.type = "music";
     this.responses = [title, name];
   }
 
@@ -36,7 +35,6 @@ export class SearchComponent implements OnInit {
     this.feedService.addPost(musicPost);
     this.childValue[0] = true;
     this.childValue[1] = false;
-    this.type = "";
     this.responses = [];
   }
 

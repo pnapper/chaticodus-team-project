@@ -1,6 +1,6 @@
 <div *ngFor="let movie of childMovie.results | slice:0:3; let i = index">
   <div *ngIf="childValue[0]">
-    <p (click)="clickedMovieSearch(movie.title, movie.artist_name)">{{movie.title}}</p>
+    <p (click)="clickedMovieSearch(movie.title)">{{movie.title}}</p>
   </div>
 </div>
 
