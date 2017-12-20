@@ -1,13 +1,40 @@
+.navbar {
+  background-image:url("/assets/images/3.jpg");
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
+  transition: all 0.35s ease-in-out;
+  position:fixed;
+  z-index:1;
+  width:100%;
+
+}
+
+.navbar:hover {
+  background-image:url("/assets/images/1.jpg");
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  transition: all 0.35s ease-in-out;
+}
+
+
+a {
+  margin-left: 100px;
+  font-size:30px;
+  color:white;
+  font-family: 'Berlin Bold';
+}
+
 a:hover {
-  cursor:pointer;
-  text-decoration:underline;
+  font-size:40px;
+  transition: all 0.35s ease-in-out;
 }
 
-li {
-  color:blue;
-
+.container-fluid {
+background-color:#637ca3;
 }
 
-li:hover {
-    text-decoration:underline;
+.navbar {
+  border-radius:0;
+  border-bottom:5px solid #5bd4ff;
 }

@@ -20,8 +20,12 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AuthGuard } from './auth-guard.service';
 import { AuthenticationService } from './authentication.service';
 import { SearchComponent } from './search/search.component';
+
+import { ReversePipe } from './reverse.pipe';
+
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { SearchMovieComponent } from './search-movie/search-movie.component';
+
 
 
 export const firebaseConfig = {
@@ -43,6 +47,9 @@ export const firebaseConfig = {
     ImagePostComponent,
     WelcomeComponent,
     SearchComponent,
+
+    ReversePipe
+
     SignUpComponent
     SearchMovieComponent
 
