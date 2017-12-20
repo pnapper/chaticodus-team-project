@@ -1,6 +1,9 @@
 
+
 <div class="posts">
   <div *ngIf="userId != null">
+    <div class="row">
+    <div class="col-md-8">
     <div class="card">
       <div class="card-header">
         <button (click)="showMusic()">Music</button>
@@ -13,6 +16,13 @@
         <div *ngIf="searchMovieShow">
           <app-movie-post [childUser] = "userId" (CloseMovie)="CloseMovieSender($event)"></app-movie-post>
         </div>
+      </div>
+     </div>
+     </div> 
+        <div class="col-md-4">
+         <app-chat [childUser] = "userId"></app-chat>
+        </div>
+       </div>
 
       </div>
       <div class="card-footer">
