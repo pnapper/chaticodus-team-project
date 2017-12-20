@@ -21,6 +21,8 @@ import { AuthGuard } from './auth-guard.service';
 import { AuthenticationService } from './authentication.service';
 import { SearchComponent } from './search/search.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { SearchMovieComponent } from './search-movie/search-movie.component';
+
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -42,6 +44,8 @@ export const firebaseConfig = {
     WelcomeComponent,
     SearchComponent,
     SignUpComponent
+    SearchMovieComponent
+
   ],
   imports: [
     BrowserModule,
