@@ -1,0 +1,34 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Chat Room</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+
+      <form (submit)="postMessage($event)" class="form-group">
+        <label>Message:</label>
+        <br>
+        <input>
+        <!-- <button type="submit" name="button">Send</button> -->
+      </form>
+
+      <div>
+
+
+       <h3>Chat Log</h3>
+
+       <!-- <select (change)="onChange($event.target.value)">
+       <option value="allGenres">All Genres</option>
+       <option value="Rock">Rock</option>
+       <option value="Pop">Pop</option>
+       <option value="Electronic">Electronic</option>
+       <option value="Jazz">Jazz</option>
+     </select> -->
+
+     <div *ngFor="let chat of chats | async">
+       <h5><strong>{{childUser}}:</strong> {{chat.message}}</h5>
+     </div>
+
+    </div>
+  </div>
+</div>

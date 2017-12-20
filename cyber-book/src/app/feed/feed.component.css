@@ -28,7 +28,7 @@ h1 {
 
 .card:hover h3 {
     margin-left:2.5%;
-    transition: all .55s ease-in-out;
+    transition: all 0.4s ease-in-out;
     margin-right:2.5%;
     font-style:italic;
 }
