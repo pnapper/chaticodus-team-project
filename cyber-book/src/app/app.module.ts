@@ -22,6 +22,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AuthGuard } from './auth-guard.service';
 import { AuthenticationService } from './authentication.service';
 import { SearchComponent } from './search/search.component';
+import { SearchMovieComponent } from './search-movie/search-movie.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -43,7 +44,8 @@ export const firebaseConfig = {
     PublicComponent,
     PrivateComponent,
     WelcomeComponent,
-    SearchComponent
+    SearchComponent,
+    SearchMovieComponent
   ],
   imports: [
     BrowserModule,

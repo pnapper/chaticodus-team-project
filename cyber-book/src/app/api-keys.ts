@@ -8,3 +8,4 @@ export const masterFirebaseConfig = {
 }
 
 export const musicKey = "c8303e90962e3a5ebd5a1f260a69b138"
+export const movieKey = "74d6492765ce803103b28654f58e61f6"

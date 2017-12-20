@@ -1,3 +1,25 @@
-<p>
-  movie-post works!
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Movie Posting</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+
+      <div>
+        <label>Title:</label>
+        <br>
+        <input #newTitle>
+      </div>
+
+      <button class = "btn btn-info" (click)="movieForm(newTitle.value);newTitle.value='';">Search</button>
+
+    </div>
+
+    <div *ngIf="movies && !noMovies">
+      <app-search-movie [childMovie]="movies"></app-search-movie>
+    </div>
+    <div *ngIf="noMovies">
+        <h3>No movie similar with your search</h3>
+    </div>
+  </div>
+</div>
