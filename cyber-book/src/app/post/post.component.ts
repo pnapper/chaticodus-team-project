@@ -18,6 +18,6 @@ export class PostComponent implements OnInit {
   }
   submitForm(username: string, type: string, status: string, response: string) {
     var newPost: Posts = new Posts(username, type, status, [response]);
-    this.feedService.addNormalPost(newPost);
+    this.feedService.addPost(newPost);
   }
 }
