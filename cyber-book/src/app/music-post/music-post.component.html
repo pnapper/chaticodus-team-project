@@ -16,7 +16,7 @@
     </div>
 
     <div *ngIf="musics && !noMusics">
-      <app-search [childMusic]="musics" ></app-search>
+      <app-search [childMusic]="musics" [childValue]="values" ></app-search>
     </div>
     <div *ngIf="noMusics">
         <h3>No music similar with your search</h3>

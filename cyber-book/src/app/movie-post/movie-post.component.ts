@@ -11,10 +11,12 @@ import { Router } from '@angular/router';
 export class MoviePostComponent implements OnInit {
 
   movies: any[]=null;
+  values: any[]=[true,false]
   noMovies: boolean=false;
   constructor(private MovieService: MovieApiService) { }
   movieForm(title: string) {
     this.noMovies = false;
+    this.values=[true,false]
     this.MovieService.getMovie(title).subscribe(response => {
       if(response.json().results.length > 0)
         {
