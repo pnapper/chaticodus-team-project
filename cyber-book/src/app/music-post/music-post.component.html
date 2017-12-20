@@ -11,7 +11,7 @@
   </div>
   <div class="panel-body">
     <div *ngIf="musics && !noMusics">
-      <app-search [childMusic]="musics"></app-search>
+      <app-search [childMusic]="musics" ></app-search>
     </div>
     <div *ngIf="noMusics">
         <h3>No matches found.  Please try a different search.</h3>
