@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
 import { MusicApiService } from '../music-api.service';
 import { Router } from '@angular/router';
 
@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class MusicPostComponent implements OnInit {
 
   @Input() childUser;
+  @Output() CloseMusic = new EventEmitter();
 
   musics: any[]=null;
   values: any[]=[true,false];
@@ -33,5 +34,10 @@ export class MusicPostComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  CloseMusicSender(value: boolean){
+    this.CloseMusic.emit(value);
+  }
+
 
 }

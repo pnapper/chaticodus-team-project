@@ -1,20 +1,22 @@
-<div class="panel panel-default" class="musicpanel">
-  <div class="panel-heading">
-    <h3 class="panel-title">Enter song name:</h3>
+<div class="card">
+  <div class="card-header">
+    <h3>Enter song name:</h3>
+  </div>
 
-      <label>Title:</label>
+  <div class="card-body">
 
       <input #newTitle>
 
-    <br>
-    <button class = "btn btn-info" (click)="musicForm(newTitle.value);newTitle.value='';">Search</button>
-  </div>
-  <div class="panel-body">
+
+    <button (click)="musicForm(newTitle.value);newTitle.value='';">Search</button>
+
+
+
     <div *ngIf="musics && !noMusics">
-      <app-search [childMusic]="musics" [childValue]="values" [childUser]="childUser" ></app-search>
+      <app-search [childMusic]="musics" [childValue]="values" [childUser]="childUser" (CloseMusic)="CloseMusicSender($event)"></app-search>
     </div>
     <div *ngIf="noMusics">
-        <h3>No matches found.  Please try a different search.</h3>
+      <h3>No matches found.  Please try a different search.</h3>
     </div>
   </div>
 </div>

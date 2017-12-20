@@ -1,6 +1,6 @@
 <div *ngFor="let music of childMusic.data;">
   <div *ngIf="childValue[0]">
-    <p (click)="clickedMusicSearch(music.title, music.artist_name)">{{music.title}} by {{music.artist_name}}</p>
+    <a><li class="clickhover" (click)="clickedMusicSearch(music.title, music.artist_name)" >{{music.title}} by {{music.artist_name}}</li></a>
   </div>
 </div>
 
@@ -8,10 +8,10 @@
     <p>I am listening to {{responses[0]}} by {{responses[1]}}<p>
     <label>Username: {{childUser}}</label><br>
     <!-- <input #newUser> -->
-    <label>Status:</label>
-    <textarea #newStatus></textarea>
-    <button class="btn btn-info" (click) = "postMusicSearch(
+    <label>Status:</label><br>
+    <textarea #newStatus></textarea><br>
+    <button (click) = "postMusicSearch(
           childUser,
           newStatus.value);
-          newStatus.value='';">post</button>
+          newStatus.value='';" (click)="clickCloseMusic()">post</button>
 </div>

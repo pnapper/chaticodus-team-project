@@ -14,7 +14,6 @@ import { FirebaseListObservable } from 'angularfire2/database';
   providers: [FeedService, UserService]
 })
 export class FeedComponent implements OnInit {
-  @Input() childMusic;
 
   posts: FirebaseListObservable<any[]>;
 

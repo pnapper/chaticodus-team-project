@@ -17,6 +17,8 @@ export class WelcomeComponent implements OnInit {
   msgVal: string = '';
   userId;
   realuser;
+  searchMusicShow: boolean = false;
+  searchMovieShow: boolean = false;
 
 
   constructor(public afAuth: AngularFireAuth, public af: AngularFireDatabase) {
@@ -31,9 +33,6 @@ export class WelcomeComponent implements OnInit {
       if(myUser){
         this.realuser = this.afAuth.auth.currentUser;
         this.userId = this.realuser.email;
-        console.log('logged in');
-        console.log(this.realuser);
-
       }
     })
 
@@ -71,6 +70,24 @@ export class WelcomeComponent implements OnInit {
   Send(desc: string) {
       this.items.push({ message: desc});
       this.msgVal = '';
+  }
+
+  showMusic(){
+    this.searchMusicShow = true;
+    this.searchMovieShow = false;
+  }
+
+  showMovie(){
+    this.searchMovieShow = true;
+    this.searchMusicShow = false;
+  }
+
+  CloseMovieSender(value: boolean){
+    this.searchMovieShow = value;
+  }
+
+  CloseMusicSender(value: boolean){
+    this.searchMusicShow = value;
   }
 
 

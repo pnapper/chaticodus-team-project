@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
 import { Users } from '../users.model';
 import { Posts } from '../posts.model';
 import { FeedService } from '../feed.service';
@@ -16,8 +16,10 @@ export class SearchComponent implements OnInit {
   @Input() childMusic;
   @Input() childValue;
   @Input() childUser;
+  @Output() CloseMusic = new EventEmitter();
   type: string = "music";
   responses: string[];
+  CloseMusicValue: boolean = false;
 
   constructor(private router: Router, private userService: UserService, private feedService: FeedService) { }
 
@@ -33,9 +35,12 @@ export class SearchComponent implements OnInit {
   postMusicSearch(username: string, status: string){
     let musicPost = new Posts(username, this.type, status, this.responses);
     this.feedService.addPost(musicPost);
-    this.childValue[0] = true;
     this.childValue[1] = false;
     this.responses = [];
+  }
+
+  clickCloseMusic(){
+    this.CloseMusic.emit(this.CloseMusicValue);
   }
 
 }
