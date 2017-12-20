@@ -1,9 +1,11 @@
-<br><br><br><br>
+<br><br><br><br><br>
 <div class="welcome">
   <h3>You are signed in as: {{userId}}</h3>
 </div>
-<div class="container">
 
-  <app-music-post></app-music-post>
+<div class="container">
+  <app-music-post [childUser] = "userId"></app-music-post>
+  <app-movie-post [childUser] = "userId"></app-movie-post>
   <app-feed></app-feed>
+
 </div>

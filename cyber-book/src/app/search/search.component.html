@@ -6,8 +6,8 @@
 
 <div *ngIf="childValue[1] && type == 'music'">
     <p>I am listening to {{responses[0]}} by {{responses[1]}}<p>
-    <label>Username:</label>
-    <input #newUser>
+    <label>Username: {{childUser}}</label><br>
+    <!-- <input #newUser> -->
     <label>Status:</label>
     <textarea #newStatus></textarea>
     <button class="btn btn-info" (click) = "postMusicSearch(

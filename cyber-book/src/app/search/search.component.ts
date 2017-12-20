@@ -15,8 +15,9 @@ export class SearchComponent implements OnInit {
 
   @Input() childMusic;
   @Input() childValue;
+  @Input() childUser;
   type: string;
-  responses: string[]
+  responses: string[];
 
   constructor(private router: Router, private userService: UserService, private feedService: FeedService) { }
 

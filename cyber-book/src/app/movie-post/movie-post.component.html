@@ -16,7 +16,7 @@
     </div>
 
     <div *ngIf="movies && !noMovies">
-      <app-search-movie [childMovie]="movies" [childValue]="values"></app-search-movie>
+      <app-search-movie [childMovie]="movies" [childValue]="values" [childUser]="childUser"></app-search-movie>
     </div>
     <div *ngIf="noMovies">
         <h3>No movie similar with your search</h3>
