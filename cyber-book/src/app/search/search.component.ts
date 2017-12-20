@@ -14,8 +14,7 @@ import { Router } from '@angular/router';
 export class SearchComponent implements OnInit {
 
   @Input() childMusic;
-  searchValue: boolean = true;
-  resultValue: boolean = false;
+  @Input() childValue;
   type: string;
   responses: string[]
 
@@ -25,17 +24,17 @@ export class SearchComponent implements OnInit {
   }
 
   clickedMusicSearch(title: string, name: string){
-    this.searchValue = false;
-    this.resultValue = true;
+    this.childValue[0] = false;
+    this.childValue[1] = true;
     this.type = "music";
-    this.responses = [title, name]
+    this.responses = [title, name];
   }
 
   postMusicSearch(username: string, status: string){
     let musicPost = new Posts(username, this.type, status, this.responses);
     this.feedService.addPost(musicPost);
-    this.searchValue = true;
-    this.resultValue = false;
+    this.childValue[0] = true;
+    this.childValue[1] = false;
     this.type = "";
     this.responses = [];
   }

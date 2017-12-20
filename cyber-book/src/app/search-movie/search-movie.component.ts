@@ -13,8 +13,7 @@ import { Router } from '@angular/router';
 export class SearchMovieComponent implements OnInit {
 
   @Input() childMovie;
-  searchValue: boolean = true;
-  resultValue: boolean = false;
+  @Input() childValue;
   type: string;
   responses: string[]
 
@@ -24,8 +23,8 @@ export class SearchMovieComponent implements OnInit {
   }
 
   clickedMovieSearch(title: string){
-    this.searchValue = false;
-    this.resultValue = true;
+    this.childValue[0] = false;
+    this.childValue[1] = true;
     this.type = "movie";
     this.responses = [title]
   }
@@ -33,8 +32,8 @@ export class SearchMovieComponent implements OnInit {
   postMovieSearch(username: string){
     let moviePost = new Posts(username, this.type, status, this.responses);
     this.feedService.addPost(moviePost);
-    this.searchValue = true;
-    this.resultValue = false;
+    this.childValue[0] = true;
+    this.childValue[1] = false;
     this.type = "";
     this.responses = [];
   }
