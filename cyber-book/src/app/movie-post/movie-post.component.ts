@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MovieApiService } from '../movie-api.service';
 import { Router } from '@angular/router';
 
@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class MoviePostComponent implements OnInit {
 
   @Input() childUser;
+  @Output() CloseMovie = new EventEmitter();
 
   movies: any[]=null;
   values: any[]=[true,false]
@@ -31,6 +32,10 @@ export class MoviePostComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  CloseMovieSender(value: boolean){
+    this.CloseMovie.emit(value);
   }
 
 }

@@ -1,0 +1,7 @@
+li {
+  cursor:pointer;
+  text-decoration:underline;
+  text-decoration-color:blue;
+  list-style:none;
+  color:blue;
+}

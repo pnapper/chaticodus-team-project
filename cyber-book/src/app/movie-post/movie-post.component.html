@@ -1,25 +1,24 @@
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Movie Posting</h3>
+<div class="card">
+  <div class="card-header">
+    <h3>Enter movie name:</h3>
   </div>
-  <div class="panel-body">
-    <div>
 
-      <div>
-        <label>Title:</label>
-        <br>
+  <div class="card-body">
+
         <input #newTitle>
+
+        <div *ngIf="movies && !noMovies">
+          <app-search-movie [childMovie]="movies" [childValue]="values" [childUser]="childUser" (CloseMovie)="CloseMovieSender($event)"></app-search-movie>
+        </div>
+        <div *ngIf="noMovies">
+          <h3>No movie similar with your search</h3>
+        </div>
       </div>
+      <div class="card-footer">
 
-      <button class = "btn btn-info" (click)="movieForm(newTitle.value);newTitle.value='';">Search</button>
+        <button (click)="movieForm(newTitle.value);newTitle.value='';">Search</button>
 
     </div>
 
-    <div *ngIf="movies && !noMovies">
-      <app-search-movie [childMovie]="movies" [childValue]="values" [childUser]="childUser"></app-search-movie>
-    </div>
-    <div *ngIf="noMovies">
-        <h3>No movie similar with your search</h3>
-    </div>
-  </div>
+
 </div>

@@ -38,3 +38,7 @@ background-color:#637ca3;
   border-radius:0;
   border-bottom:5px solid #5bd4ff;
 }
+
+.navbar-nav {
+  width:100%;
+}

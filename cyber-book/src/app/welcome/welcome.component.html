@@ -1,11 +1,24 @@
-<br><br><br><br><br>
-<div class="welcome">
-  <h3>You are signed in as: {{userId}}</h3>
-</div>
 
-<div class="container">
-  <app-music-post [childUser] = "userId"></app-music-post>
-  <app-movie-post [childUser] = "userId"></app-movie-post>
+<div class="posts">
+  <div *ngIf="userId != null">
+    <div class="card">
+      <div class="card-header">
+        <button (click)="showMusic()">Music</button>
+        <button (click)="showMovie()">Movie</button>
+      </div>
+      <div class="card-body">
+        <div *ngIf="searchMusicShow">
+          <app-music-post [childUser] = "userId" (CloseMusic)="CloseMusicSender($event)"></app-music-post>
+        </div>
+        <div *ngIf="searchMovieShow">
+          <app-movie-post [childUser] = "userId" (CloseMovie)="CloseMovieSender($event)"></app-movie-post>
+        </div>
+
+      </div>
+      <div class="card-footer">
+
+      </div>
+    </div>
+  </div>
   <app-feed></app-feed>
-
 </div>

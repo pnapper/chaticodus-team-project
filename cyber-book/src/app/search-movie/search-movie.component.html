@@ -5,7 +5,7 @@
 </div>
 
 <div *ngIf="childValue[1] && type == 'movie'">
-    <p>I am watching to {{responses[0]}}<p>
+    <p>I am watching {{responses[0]}}<p>
     <label>Username: {{childUser}}</label><br>
     <!-- <input #newUser> -->
     <label>Status:</label>
@@ -13,5 +13,5 @@
     <button class="btn btn-info" (click) = "postMovieSearch(
           childUser,
           newStatus.value);
-          newStatus.value='';">post</button>
+          newStatus.value='';" (click)="clickCloseMovie()">post</button>
 </div>
