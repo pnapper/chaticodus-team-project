@@ -4,8 +4,15 @@
 </div>
 
 <div class="container">
-  <app-music-post [childUser] = "userId"></app-music-post>
-  <app-movie-post [childUser] = "userId"></app-movie-post>
-  <app-feed></app-feed>
+  <div class="row">
+    <div class="col-md-8">
+      <app-music-post [childUser] = "userId"></app-music-post>
+      <app-movie-post [childUser] = "userId"></app-movie-post>
+      <app-feed></app-feed>
+    </div>
+    <div class="col-md-4">
+      <app-chat></app-chat>
+    </div>
+  </div>
 
 </div>

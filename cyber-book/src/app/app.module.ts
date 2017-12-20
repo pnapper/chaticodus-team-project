@@ -25,6 +25,7 @@ import { ReversePipe } from './reverse.pipe';
 
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { SearchMovieComponent } from './search-movie/search-movie.component';
+import { ChatComponent } from './chat/chat.component';
 
 
 
@@ -47,11 +48,10 @@ export const firebaseConfig = {
     ImagePostComponent,
     WelcomeComponent,
     SearchComponent,
-
     ReversePipe,
-
     SignUpComponent,
-    SearchMovieComponent
+    SearchMovieComponent,
+    ChatComponent
 
   ],
   imports: [
