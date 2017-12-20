@@ -1,8 +1,8 @@
-<!-- <div *ngFor="let music of childMusic.data;">
+<div *ngFor="let music of childMusic.data;">
   <div *ngIf="searchValue">
     <p (click)="clickedMusicSearch(music.title, music.artist_name)">{{music.title}} by {{music.artist_name}}</p>
   </div>
-</div> -->
+</div>
 
 <div *ngIf="resultValue && type == 'music'">
     <p>I am listening to {{responses[0]}} by {{responses[1]}}<p>

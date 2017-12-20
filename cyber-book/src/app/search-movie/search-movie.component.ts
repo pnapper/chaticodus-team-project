@@ -4,16 +4,15 @@ import { Posts } from '../posts.model';
 import { FeedService } from '../feed.service';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
-
 @Component({
-  selector: 'app-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css'],
-  providers: [FeedService, UserService]
+  selector: 'app-search-movie',
+  templateUrl: './search-movie.component.html',
+  styleUrls: ['./search-movie.component.css'],
+  providers: [ FeedService, UserService ]
 })
-export class SearchComponent implements OnInit {
+export class SearchMovieComponent implements OnInit {
 
-  @Input() childMusic;
+  @Input() childMovie;
   searchValue: boolean = true;
   resultValue: boolean = false;
   type: string;
@@ -24,16 +23,16 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
   }
 
-  clickedMusicSearch(title: string, name: string){
+  clickedMovieSearch(title: string){
     this.searchValue = false;
     this.resultValue = true;
-    this.type = "music";
-    this.responses = [title, name]
+    this.type = "movie";
+    this.responses = [title]
   }
 
-  postMusicSearch(username: string, status: string){
-    let musicPost = new Posts(username, this.type, status, this.responses);
-    this.feedService.addPost(musicPost);
+  postMovieSearch(username: string){
+    let moviePost = new Posts(username, this.type, status, this.responses);
+    this.feedService.addPost(moviePost);
     this.searchValue = true;
     this.resultValue = false;
     this.type = "";
