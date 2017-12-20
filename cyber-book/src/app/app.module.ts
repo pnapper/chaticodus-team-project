@@ -48,9 +48,9 @@ export const firebaseConfig = {
     WelcomeComponent,
     SearchComponent,
 
-    ReversePipe
+    ReversePipe,
 
-    SignUpComponent
+    SignUpComponent,
     SearchMovieComponent
 
   ],
