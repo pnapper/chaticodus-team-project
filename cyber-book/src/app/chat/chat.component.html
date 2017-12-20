@@ -5,22 +5,16 @@
   <div class="panel-body">
     <div>
 
-      <div>
-        <label>Enter Your Alias:</label>
+      <form (submit)="postMessage($event)" class="form-group">
+        <label>Message:</label>
         <br>
-        <input #newAlias>
-      </div>
+        <input>
+        <!-- <button type="submit" name="button">Send</button> -->
+      </form>
 
       <div>
-        <label>Enter Message:</label>
-        <br>
-        <input #newMessage>
-      </div>
 
 
-
-       <button (click)="submitForm(newAlias.value, newMessage.value);newAlias.value=''; newMessage.value=''">Add</button>
-       <br>
        <h3>Chat Log</h3>
 
        <!-- <select (change)="onChange($event.target.value)">
@@ -32,7 +26,7 @@
      </select> -->
 
      <div *ngFor="let chat of chats | async">
-       <h5><strong>{{chat.alias}}:</strong> {{chat.message}}</h5>
+       <h5><strong>{{childUser}}:</strong> {{chat.message}}</h5>
      </div>
 
     </div>
