@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MusicApiService } from '../music-api.service';
 import { Router } from '@angular/router';
 
@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
   providers: [ MusicApiService ]
 })
 export class MusicPostComponent implements OnInit {
+
+  @Input() childUser;
 
   musics: any[]=null;
   values: any[]=[true,false];
