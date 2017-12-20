@@ -6,3 +6,5 @@ export const masterFirebaseConfig = {
     storageBucket: "cyber-book.appspot.com",
     messagingSenderId: "890905415707"
 }
+
+export const musicKey = "c8303e90962e3a5ebd5a1f260a69b138"

@@ -14,7 +14,12 @@ export class FeedService {
       return this.posts;
     }
 
-  addNormalPost(newPost: Posts) {
+  addPost(newPost: Posts) {
     this.posts.push(newPost);
   }
+
+  addMusicPost(){
+    
+  }
+
 }

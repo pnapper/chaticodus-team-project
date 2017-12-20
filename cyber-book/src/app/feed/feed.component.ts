@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Users } from '../users.model';
 import { Posts } from '../posts.model';
 import { FeedService } from '../feed.service';
@@ -14,6 +14,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
   providers: [FeedService, UserService]
 })
 export class FeedComponent implements OnInit {
+  @Input() childMusic;
 
   posts: FirebaseListObservable<any[]>;
 

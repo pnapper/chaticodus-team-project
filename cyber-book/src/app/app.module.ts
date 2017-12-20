@@ -21,6 +21,7 @@ import { PrivateComponent } from './private/private.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AuthGuard } from './auth-guard.service';
 import { AuthenticationService } from './authentication.service';
+import { SearchComponent } from './search/search.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -41,7 +42,8 @@ export const firebaseConfig = {
     ImagePostComponent,
     PublicComponent,
     PrivateComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

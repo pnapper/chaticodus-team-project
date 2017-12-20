@@ -1,0 +1,18 @@
+<div *ngFor="let music of childMusic.data;" class="photo">
+  <div *ngIf="searchValue == true">
+    <p (click)="clickedMusicSearch(music.title, music.artist_name)">{{music.title}} by {{music.artist_name}}</p>
+  </div>
+</div>
+
+<div *ngIf="resultValue == true && type == 'music'">
+    <p>I am listening to {{responses[0]}} by {{responses[1]}}<p>
+    <label>Username:</label>
+    <input #newUser>
+    <label>Status:</label>
+    <textarea #newStatus></textarea>
+    <button class="btn btn-info" (click) = "postMusicSearch(
+          newUser.value,
+          newStatus.value);
+          newUser.value='';
+          newStatus.value='';">post</button>
+</div>
