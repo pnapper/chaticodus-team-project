@@ -1,9 +1,18 @@
-<div *ngFor="let post of posts | async" class="panel panel-default">
-  <div class="panel-body">
+<h1>NEWS</h1>
 
-      {{post.username}}
+<div *ngFor="let post of posts | async | reverse ">
 
-      {{post.response[0]}}
-
+  <div class="card">
+    <div class="card-header">
+      <h3><i class="fa fa-user fa-1x" aria-hidden="true"></i>{{post.username}}</h3>
+    </div>
+    <div class="card-body">
+      <p>{{post.status}}</p>
+    </div>
+    <div class="card-footer">
+      <p>Now listening to: {{post.response[0]}}</p>
+    </div>
   </div>
+
+
 </div>

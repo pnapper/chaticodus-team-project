@@ -24,4 +24,5 @@ export class FeedComponent implements OnInit {
     this.posts = this.feedService.getPosts();
   }
 
+
 }

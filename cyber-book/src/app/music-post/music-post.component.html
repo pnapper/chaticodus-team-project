@@ -1,25 +1,20 @@
-<div class="panel panel-default">
+<div class="panel panel-default" class="musicpanel">
   <div class="panel-heading">
-    <h3 class="panel-title">Music Posting</h3>
+    <h3 class="panel-title">Enter song name:</h3>
+
+      <label>Title:</label>
+
+      <input #newTitle>
+
+    <br>
+    <button class = "btn btn-info" (click)="musicForm(newTitle.value);newTitle.value='';">Search</button>
   </div>
   <div class="panel-body">
-    <div>
-
-      <div>
-        <label>Title:</label>
-        <br>
-        <input #newTitle>
-      </div>
-
-      <button class = "btn btn-info" (click)="musicForm(newTitle.value);newTitle.value='';">Search</button>
-
-    </div>
-
     <div *ngIf="musics && !noMusics">
       <app-search [childMusic]="musics"></app-search>
     </div>
     <div *ngIf="noMusics">
-        <h3>No music similar with your search</h3>
+        <h3>No matches found.  Please try a different search.</h3>
     </div>
   </div>
 </div>
