@@ -17,7 +17,7 @@ export class SearchMovieComponent implements OnInit {
   @Input() childMovie;
   @Input() childValue;
   @Input() childUser;
-  type: string;
+  type: string = "movie";
   responses: string[];
 
   constructor(private router: Router, private userService: UserService, private feedService: FeedService) { }
@@ -25,11 +25,10 @@ export class SearchMovieComponent implements OnInit {
   ngOnInit() {
   }
 
-  clickedMovieSearch(title: string, name: string){
+  clickedMovieSearch(title: string){
     this.childValue[0] = false;
     this.childValue[1] = true;
-    this.type = "movie";
-    this.responses = [title, name];
+    this.responses = [title];
   }
 
   postMovieSearch(username: string, status: string){
@@ -37,7 +36,6 @@ export class SearchMovieComponent implements OnInit {
     this.feedService.addPost(moviePost);
     this.childValue[0] = true;
     this.childValue[1] = false;
-    this.type = "";
     this.responses = [];
   }
 }
