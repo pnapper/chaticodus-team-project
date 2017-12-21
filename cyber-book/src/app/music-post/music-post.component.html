@@ -7,9 +7,6 @@
 
       <input #newTitle>
 
-
-
-
     <div *ngIf="musics && !noMusics">
       <app-search [childMusic]="musics" [childValue]="values" [childUser]="childUser" (CloseMusic)="CloseMusicSender($event)"></app-search>
     </div>

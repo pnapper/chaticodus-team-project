@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Users } from '../users.model';
 import { Posts } from '../posts.model';
 import { FeedService } from '../feed.service';
@@ -12,12 +12,15 @@ import { UserService } from '../user.service';
 })
 export class PostComponent implements OnInit {
 
+  @Input() childUser;
+  @Output() ClosePost = new EventEmitter();
+
   constructor(private userService: UserService, private feedService: FeedService) { }
 
   ngOnInit() {
   }
-  submitForm(username: string, type: string, status: string, response: string) {
-    var newPost: Posts = new Posts(username, type, status, [response]);
+  submitForm(username: string, status: string) {
+    var newPost: Posts = new Posts(username, "normal", status, [], Date.now());
     this.feedService.addPost(newPost);
   }
 }

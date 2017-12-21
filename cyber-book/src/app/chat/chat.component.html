@@ -6,24 +6,24 @@
   </div>
   <div class="card-body">
 
-     <div class="chatmsg" *ngFor="let chat of chats | async">
-       <h5>{{chat.alias}}:</h5>
-       <p>{{chat.message}}</p>
-       <hr>
-     </div>
+    <form (submit)="postMessage($event)" class="form-group">
+      <label>Message:</label>
+      <br>
+      <input>
+      <button type="submit" name="button">Send</button>
+    </form>
 
      </div>
 
      <div class="card-footer">
-     <form (submit)="postMessage($event)" class="form-group">
-       <label>Message:</label>
-       <br>
-       <input>
-       <button type="submit" name="button">Send</button>
-     </form>
+
+     <div class="chatmsg" *ngFor="let chat of chats | async | timestamp:'descending' | slice:0:16; let i = index">
+       <h5>{{chat.alias}}:</h5>
+       <p>{{chat.message}}</p>
+       <hr>
+     </div>
    </div>
-
-
-
+   <h6>End of Chat</h6>
 </div>
+
 </div>

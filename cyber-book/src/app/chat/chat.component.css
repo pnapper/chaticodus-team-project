@@ -21,6 +21,11 @@ h2 {
   text-align:center;
 }
 
+h6 {
+padding-bottom:5px;
+text-align:center;
+}
+
 .card-body {
   padding:12.5px;
 }

@@ -10,7 +10,7 @@
     <!-- <input #newUser> -->
     <label>Status:</label>
     <textarea #newStatus></textarea>
-    <button class="btn btn-info" (click) = "postMovieSearch(
+    <button (click) = "postMovieSearch(
           childUser,
           newStatus.value);
           newStatus.value='';" (click)="clickCloseMovie()">post</button>

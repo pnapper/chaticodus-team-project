@@ -19,6 +19,7 @@ export class WelcomeComponent implements OnInit {
   realuser;
   searchMusicShow: boolean = false;
   searchMovieShow: boolean = false;
+  searchPostShow: boolean = false;
 
 
   constructor(public afAuth: AngularFireAuth, public af: AngularFireDatabase) {
@@ -75,11 +76,19 @@ export class WelcomeComponent implements OnInit {
   showMusic(){
     this.searchMusicShow = true;
     this.searchMovieShow = false;
+    this.searchPostShow = false;
   }
 
   showMovie(){
     this.searchMovieShow = true;
     this.searchMusicShow = false;
+    this.searchPostShow = false;
+  }
+
+  showPost(){
+    this.searchPostShow = true;
+    this.searchMusicShow = false;
+    this.searchMovieShow = false;
   }
 
   CloseMovieSender(value: boolean){
@@ -88,6 +97,10 @@ export class WelcomeComponent implements OnInit {
 
   CloseMusicSender(value: boolean){
     this.searchMusicShow = value;
+  }
+
+  ClosePostSender(value: boolean){
+    this.searchPostShow = value;
   }
 
 

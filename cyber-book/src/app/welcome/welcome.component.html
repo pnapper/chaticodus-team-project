@@ -5,9 +5,10 @@
 
 
 
-
+            <button (click)="showPost()">Text</button>
             <button (click)="showMusic()">Music</button>
             <button (click)="showMovie()">Movie</button>
+
 
 
             <div *ngIf="searchMusicShow">
@@ -15,6 +16,9 @@
             </div>
             <div *ngIf="searchMovieShow">
               <app-movie-post [childUser] = "userId" (CloseMovie)="CloseMovieSender($event)"></app-movie-post>
+            </div>
+            <div *ngIf="searchPostShow">
+              <app-post [childUser] = "userId" (ClosePost)="ClosePostSender($event)"></app-post>
             </div>
 
 

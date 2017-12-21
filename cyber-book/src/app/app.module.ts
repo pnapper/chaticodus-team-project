@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { InfiniteScrollModule } from 'angular2-infinite-scroll';
 import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
@@ -26,6 +27,7 @@ import { ReversePipe } from './reverse.pipe';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { SearchMovieComponent } from './search-movie/search-movie.component';
 import { ChatComponent } from './chat/chat.component';
+import { TimestampPipe } from './timestamp.pipe';
 
 
 
@@ -51,7 +53,8 @@ export const firebaseConfig = {
     ReversePipe,
     SignUpComponent,
     SearchMovieComponent,
-    ChatComponent
+    ChatComponent,
+    TimestampPipe
 
   ],
   imports: [
@@ -62,6 +65,7 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
+    InfiniteScrollModule
   ],
   providers: [AuthGuard, AuthenticationService],
   bootstrap: [AppComponent]

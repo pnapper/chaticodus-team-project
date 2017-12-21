@@ -5,32 +5,14 @@
   <div class="panel-body">
     <div>
       <div>
-        <label>Type:</label>
-        <br>
-        <input #newType>
-      </div>
-
-      <div>
         <label>Status:</label>
         <br>
         <textarea #newStatus></textarea>
       </div>
-
-      <div>
-        <label>Response:</label>
-        <br>
-        <input #newResponse>
-      </div>
-      <button class = "btn btn-info" (click)="submitForm(
-        newUsername.value,
-        newType.value,
-        newStatus.value,
-        newResponse.value);
-        newUsername.value='';
-        newType.value='';
-        newStatus.value='';
-        newResponse.value='';">Post</button>
-
+      <button (click)="submitForm(
+        childUser,
+        newStatus.value);
+        newStatus.value='';">Post</button>
     </div>
   </div>
 </div>
