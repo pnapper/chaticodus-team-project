@@ -5,16 +5,18 @@
 </div>
 <div class="signupform">
   <form (submit)="createUser($event)">
-    <div class="input">
-      <label>EMAIL:</label><br>
-      <input type="email" required>
+    <div class="input ">
+      <label>Email:</label><br>
+      <input class="form-control" type="email" required>
     </div>
     <div class="input">
-      <label>PASSWORD (at least 6 characters long):</label><br>
-      <input type="password" required>
+      <label>Password <span id="subtext">(at least 6 characters long)</span> :</label><br>
+      <input class="form-control" type="password" required>
     </div>
+  
+
     <div class="input">
-      <button type="submit">Create Account</button>
+      <button class="btn btn-primary" type="submit">Create Account</button>
     </div>
   </form>
 </div>

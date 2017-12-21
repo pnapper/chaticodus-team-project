@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Berlin Bold';
+  src: url("/assets/fonts/Berlin Bold.ttf");
+}
+
 .navbar {
   transition: all 0.35s ease-in-out;
   position:fixed;

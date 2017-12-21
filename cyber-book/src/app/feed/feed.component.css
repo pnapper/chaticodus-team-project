@@ -63,3 +63,9 @@ h1 {
 .fa-envelope:hover {
   color:#d48adb;
 }
+
+.input-group-addon {
+  text-align:center;
+  display:inline;
+  display:inline-block;
+}

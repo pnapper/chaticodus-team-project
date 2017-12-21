@@ -1,0 +1,48 @@
+.login {
+  margin-top:100px;
+}
+
+.chaticodusimage {
+  text-align:center;
+}
+
+img {
+  margin-top: 150px;
+}
+
+
+.loginform {
+  text-align:center;
+  height:1028px;
+}
+
+label {
+  color:white;
+  margin-top:20px;
+  font-family: 'Raleway', sans-serif;
+  font-size:20px;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  margin-top: 3px;
+  color: white;
+}
+
+#subtext {
+  font-size: 14px;
+}
+
+button {
+  margin-top:40px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+
+}
+
+.form-control {
+  margin: auto;
+  width: 400px;
+}
