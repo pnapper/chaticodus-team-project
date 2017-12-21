@@ -1,23 +1,26 @@
 <h1>NEWS</h1>
 
-<div *ngFor="let post of posts | async | reverse | slice:0:10; let i = index ">
+<div class="feedwrapper">
+  <div class="feedleft">
+    <div *ngFor="let post of posts | async | reverse | slice:0:10; let i = index ">
 
-  <div class="card">
-    <div class="card-header">
-      <h3><i class="fa fa-user fa-1x" aria-hidden="true"></i>{{post.username}}</h3>
-    </div>
-    <div class="card-body">
-      <p>{{post.status}}</p>
-    </div>
-    <div class="card-footer">
-      <div *ngIf = "post.type == 'music'">
-        <p>Now listening to: {{post.response[0]}} by {{post.response[1]}}</p>
-      </div>
-      <div *ngIf = "post.type == 'movie'">
-        <p>Now watching: {{post.response[0]}}</p>
+      <div class="card">
+        <div class="card-header">
+          <h3><i class="fa fa-user fa-1x" aria-hidden="true"></i>{{post.username}}</h3>
+        </div>
+        <div class="card-body">
+          <p>{{post.status}}</p>
+        </div>
+        <div class="card-footer">
+          <div *ngIf = "post.type == 'music'">
+            <p>Now listening to: {{post.response[0]}} by {{post.response[1]}}</p>
+          </div>
+          <div *ngIf = "post.type == 'movie'">
+            <p>Now watching: {{post.response[0]}}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-
 
 </div>

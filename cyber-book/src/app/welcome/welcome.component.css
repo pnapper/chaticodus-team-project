@@ -1,17 +1,17 @@
 .posts {
   margin-top:100px;
-
 }
 
-.chatright {
-  position:absolute;
+
+.feedleft {
+display:inline-block;
+  width:79%;
+}
+
+.feedright {
   width:20%;
   display:inline-block;
   float:right;
-  margin-top:65px;
-}
-
-.feedleft {
-  float:left;
-  width:80%;
+  margin-top:69px;
+  height:100%;
 }

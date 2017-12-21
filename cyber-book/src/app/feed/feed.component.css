@@ -8,10 +8,10 @@ h1 {
 }
 
 .card {
-  width: 80%;
+  width: 100%;
   border:0;
   margin-bottom:10px;
-  margin-left:15px;
+  margin-left:1px;
 }
 
 .card-header {

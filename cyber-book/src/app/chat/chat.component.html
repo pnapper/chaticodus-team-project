@@ -1,20 +1,10 @@
-<div class="panel panel-default">
-  <div class="panel-heading">
+<div class="chatcomponent">
+
+<div class="card">
+  <div class="card-header">
     <h3 class="panel-title">Chat Room</h3>
   </div>
-  <div class="panel-body">
-    <div>
-
-      <form (submit)="postMessage($event)" class="form-group">
-        <label>Message:</label>
-        <br>
-        <input>
-        <!-- <button type="submit" name="button">Send</button> -->
-      </form>
-
-      <div>
-
-
+  <div class="card-body">
        <h3>Chat Log</h3>
 
        <!-- <select (change)="onChange($event.target.value)">
@@ -29,6 +19,18 @@
        <h5><strong>{{chat.alias}}:</strong> {{chat.message}}</h5>
      </div>
 
-    </div>
-  </div>
+     </div>
+
+     <div class="card-footer">
+     <form (submit)="postMessage($event)" class="form-group">
+       <label>Message:</label>
+       <br>
+       <input>
+       <button type="submit" name="button">Send</button>
+     </form>
+   </div>
+
+
+
+</div>
 </div>
