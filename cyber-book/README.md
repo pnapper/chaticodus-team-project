@@ -28,16 +28,19 @@ Add additional notes about how to deploy this on a live system
 * [Air Conditioning](https://en.wikipedia.org/wiki/Air_conditioning#Energy_transfer.com)
 * [Coffee](https://www.starbucks.com)
 * [Monster Energy Drink](https://www.monsterenergy.com)
+* [Internet Service Provider](https://www.comcast.net)
+* [Router](https://www.linksys.net)
+* [Category 5 Cable](https://en.wikipedia.org/wiki/Category_5_cable)
 
 
 ## Versioning
 
-1.0.0
+1.0.1
 
 ## Authors
 
-* **Sanyee**
-* **Sravy**
+* **Saneyee**
+* **Sravanthi**
 * **Daniel**
 * **Gyles**
 * **Hansen**
