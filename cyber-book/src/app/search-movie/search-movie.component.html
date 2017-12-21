@@ -1,6 +1,7 @@
 <div *ngFor="let movie of childMovie.results | slice:0:3; let i = index">
   <div *ngIf="childValue[0]">
-    <p (click)="clickedMovieSearch(movie.title)">{{movie.title}}</p>
+    <a><li class="clickhover" (click)="clickedMovieSearch(movie.title)" >{{movie.title}}</li></a>
+
   </div>
 </div>
 
@@ -11,7 +12,7 @@
     <!-- <input #newUser> -->
     <label>Status:</label>
     <textarea #newStatus></textarea>
-    <button (click) = "postMovieSearch(
+    <button class="btn btn-primary" (click) = "postMovieSearch(
           childUser,
           newStatus.value);
           newStatus.value='';" (click)="clickCloseMovie()">post</button>
