@@ -19,6 +19,14 @@ Add additional notes about how to deploy this on a live system
 * [Atom](http://atom.io)
 * [Firebase](https://firebase.google.com/)
 * [Github](https://www.github.com)
+* [Computer](https://www.apple.com)
+* [Electricity](http://seattlecitylight.com)
+* [Keyboard](https://www.microsoft.com)
+* [Mouse](https://www.anker.com)
+* [Desk](https://www.multitable.com)
+* [Elevators](https://www.otisworldwide.com)
+* [Air Conditioning](https://en.wikipedia.org/wiki/Air_conditioning#Energy_transfer.com)
+
 
 ## Versioning
 
