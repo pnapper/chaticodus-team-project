@@ -41,3 +41,9 @@ h5 {
   position:absolute;
   margin-left:20px;
 }
+
+button:hover {
+  transition: all 0.35s ease-in-out;
+  background-color: purple;
+  color:white;
+}

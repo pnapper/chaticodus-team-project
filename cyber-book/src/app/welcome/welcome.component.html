@@ -1,42 +1,29 @@
-
-
 <div class="posts">
   <div *ngIf="userId != null">
 
-
     <h5>Select a button to make a post</h5>
-            <button (click)="showPost()">Text</button>
-            <button (click)="showMusic()">Music</button>
-            <button (click)="showMovie()">Movie</button>
+    <button (click)="showPost()">Text</button>
+    <button (click)="showMusic()">Music</button>
+    <button (click)="showMovie()">Movie</button>
 
+    <div *ngIf="searchMusicShow">
+      <app-music-post [childUser] = "userId" (CloseMusic)="CloseMusicSender($event)"></app-music-post>
+    </div>
+    <div *ngIf="searchMovieShow">
+      <app-movie-post [childUser] = "userId" (CloseMovie)="CloseMovieSender($event)"></app-movie-post>
+    </div>
+    <div *ngIf="searchPostShow">
+      <app-post [childUser] = "userId" (ClosePost)="ClosePostSender($event)"></app-post>
+    </div>
 
-
-            <div *ngIf="searchMusicShow">
-              <app-music-post [childUser] = "userId" (CloseMusic)="CloseMusicSender($event)"></app-music-post>
-            </div>
-            <div *ngIf="searchMovieShow">
-              <app-movie-post [childUser] = "userId" (CloseMovie)="CloseMovieSender($event)"></app-movie-post>
-            </div>
-            <div *ngIf="searchPostShow">
-              <app-post [childUser] = "userId" (ClosePost)="ClosePostSender($event)"></app-post>
-            </div>
-
-
-
-
-      <div class="feedwrapper">
-        <div class="feedleft">
+    <div class="feedwrapper">
+      <div class="feedleft">
         <app-feed></app-feed>
       </div>
 
       <div class="feedright">
         <app-chat [childUser] = "userId"></app-chat>
       </div>
-
     </div>
   </div>
-
-
-
-
-  </div>
+</div>

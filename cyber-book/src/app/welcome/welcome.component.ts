@@ -5,12 +5,12 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { Observable } from 'rxjs/Observable';
 import * as firebase from 'firebase/app';
 
-
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.css']
 })
+
 export class WelcomeComponent implements OnInit {
   user: Observable<firebase.User>;
   items: FirebaseListObservable<any[]>;
@@ -20,7 +20,6 @@ export class WelcomeComponent implements OnInit {
   searchMusicShow: boolean = false;
   searchMovieShow: boolean = false;
   searchPostShow: boolean = false;
-
 
   constructor(public afAuth: AngularFireAuth, public af: AngularFireDatabase) {
     this.items = af.list('/messages', {
@@ -36,7 +35,6 @@ export class WelcomeComponent implements OnInit {
         this.userId = this.realuser.email;
       }
     })
-
   }
 
   ngOnInit() {
@@ -55,7 +53,6 @@ export class WelcomeComponent implements OnInit {
     }).catch(function(error) {
       console.log(error.message);
     });
-
   }
 
   login() {
@@ -102,6 +99,4 @@ export class WelcomeComponent implements OnInit {
   ClosePostSender(value: boolean){
     this.searchPostShow = value;
   }
-
-
 }
