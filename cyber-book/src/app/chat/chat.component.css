@@ -6,11 +6,19 @@
 }
 
 .card-header {
-  background-color:#80aaed;
+  background-color:#d48adb;
   font-family: 'Berlin Bold';
   background-repeat:none;
   background-attachment:fixed;
   color:white;
+  border-bottom:2px solid black;
+}
+
+h2 {
+  font-family: 'Berlin Bold';
+  color:black;
+  font-size:20px;
+  text-align:center;
 }
 
 .card-body {
@@ -28,4 +36,10 @@ input {
 
 button {
   margin-top:5px;
+}
+
+.chatmsg {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-family: 'Raleway', sans-serif;
 }

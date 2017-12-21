@@ -2,21 +2,14 @@
 
 <div class="card">
   <div class="card-header">
-    <h3 class="panel-title">Chat Room</h3>
+    <h2 class="panel-title">CHAT</h2>
   </div>
   <div class="card-body">
-       <h3>Chat Log</h3>
 
-       <!-- <select (change)="onChange($event.target.value)">
-       <option value="allGenres">All Genres</option>
-       <option value="Rock">Rock</option>
-       <option value="Pop">Pop</option>
-       <option value="Electronic">Electronic</option>
-       <option value="Jazz">Jazz</option>
-     </select> -->
-
-     <div *ngFor="let chat of chats | async">
-       <h5><strong>{{chat.alias}}:</strong> {{chat.message}}</h5>
+     <div class="chatmsg" *ngFor="let chat of chats | async">
+       <h5>{{chat.alias}}:</h5>
+       <p>{{chat.message}}</p>
+       <hr>
      </div>
 
      </div>

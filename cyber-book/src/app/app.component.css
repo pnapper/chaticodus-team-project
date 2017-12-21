@@ -1,22 +1,33 @@
 .navbar {
-  background-image:url("/assets/images/3.jpg");
-  background-repeat:no-repeat;
-  background-attachment: fixed;
-  background-size:cover;
   transition: all 0.35s ease-in-out;
   position:fixed;
   z-index:1;
   width:100%;
-
+  background: #6441A5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #2a0845, #6441A5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
 }
 
+ul li {
+  display:inline;
+}
+
+ul li a {
+  display:inline;
+}
+
+ul {
+  margin-top:10px;
+}
 .navbar:hover {
-  background-image:url("/assets/images/1.jpg");
+
   background-repeat:no-repeat;
   background-attachment: fixed;
   transition: all 0.35s ease-in-out;
 }
-
 
 a {
   margin-left: 100px;
@@ -25,19 +36,41 @@ a {
   font-family: 'Berlin Bold';
 }
 
-a:hover {
-  font-size:40px;
-  transition: all 0.35s ease-in-out;
+.nav-item {
+  color:white;
 }
 
 .container-fluid {
-background-color:#637ca3;
+  background: #6441A5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #2a0845, #6441A5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
 }
 
 .navbar {
   border-radius:0;
-  border-bottom:5px solid #5bd4ff;
+  border-bottom:6px solid white;
 }
+
+a:hover {
+  font-size:40px;
+  transition: all 0.35s ease-in-out;
+  color:#d48adb;
+  text-shadow: 5px 5px 15px black;
+}
+
+li:hover {
+  transition: all 0.35s ease-in-out;
+  color:red;
+  text-shadow: 5px 5px 15px black;
+}
+
+.navbar:hover {
+  border-bottom:0px;
+}
+
 
 .navbar-nav {
   width:100%;

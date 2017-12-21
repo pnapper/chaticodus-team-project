@@ -1,14 +1,12 @@
 <div class="card">
   <div class="card-header">
-    <h3>Enter song name:</h3>
+    <h3>Song Search:</h3>
   </div>
 
   <div class="card-body">
 
       <input #newTitle>
 
-
-    <button (click)="musicForm(newTitle.value);newTitle.value='';">Search</button>
 
 
 
@@ -18,5 +16,10 @@
     <div *ngIf="noMusics">
       <h3>No matches found.  Please try a different search.</h3>
     </div>
+  </div>
+
+  <div class="card-footer">
+    <button (click)="musicForm(newTitle.value);newTitle.value='';">Search</button>
+
   </div>
 </div>
