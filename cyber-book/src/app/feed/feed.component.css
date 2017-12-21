@@ -23,6 +23,13 @@
   background-color:#e0d0dd;
 }
 
+.card-body:hover {
+  background-image: url("/assets/images/wallp2.png");
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
+}
+
 .card:hover h3 {
     margin-left:2.5%;
     transition: all 0.4s ease-in-out;
