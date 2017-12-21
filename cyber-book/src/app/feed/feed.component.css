@@ -34,6 +34,11 @@
   font-weight:bold;
 }
 
+.fa-headphones , .fa-film{
+  margin-right:20px;
+  font-size:25px;
+}
+
 
 .card-footer {
   background-color:#cccccc;
@@ -41,11 +46,20 @@
 
 h1 {
   color:white;
-    -webkit-text-stroke: 2px black;
+    /*-webkit-text-stroke: 2px black;*/
   font-family: 'Berlin Bold';
 }
 
 .fa-user {
   margin-right:20px;
   color:black;
+}
+
+.fa-envelope {
+  margin-right:10px;
+  color:#e0d0dd;
+}
+
+.fa-envelope:hover {
+  color:#d48adb;
 }
