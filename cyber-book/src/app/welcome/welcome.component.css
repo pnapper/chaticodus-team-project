@@ -36,3 +36,8 @@ button {
 h5 {
   color:white;
 }
+
+#gift {
+  position:absolute;
+  margin-left:20px;
+}

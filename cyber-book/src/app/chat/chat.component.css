@@ -13,6 +13,10 @@
   color:white;
 }
 
+.card-footer {
+  border-bottom:0px;
+}
+
 h2 {
   font-family: 'Berlin Bold';
   color:black;

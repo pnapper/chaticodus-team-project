@@ -74,8 +74,15 @@ li:hover {
 
 .navbar:hover {
   border-bottom:0px;
+  background-image: url("../assets/images/wallp.jpg");
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
 }
 
+img {
+  float:right;
+}
 
 .navbar-nav {
   width:100%;
