@@ -2,8 +2,8 @@
 
 <div class="posts">
   <div *ngIf="userId != null">
-    <div class="row">
-      <div class="col-md-8">
+
+
         <div class="card">
           <div class="card-header">
             <button (click)="showMusic()">Music</button>
@@ -18,16 +18,19 @@
             </div>
           </div>
         </div>
+
+
+      <div class="feedleft">
         <app-feed></app-feed>
       </div>
-      <div class="col-md-4">
+      <div class="chatright">
+
         <app-chat [childUser] = "userId"></app-chat>
       </div>
     </div>
-
   </div>
+
+
   <!-- <div class="card-footer">
 
   </div> -->
-
-</div>
