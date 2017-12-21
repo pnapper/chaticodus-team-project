@@ -26,13 +26,14 @@ Add additional notes about how to deploy this on a live system
 
 ## Authors
 
-* **Hansen**
-* **Daniel**
-* **Isaac**
 * **Sanyee**
 * **Sravy**
-* **Patrick**
+* **Daniel**
 * **Gyles**
+* **Hansen**
+* **Isaac**
+* **Patrick**
+
 
 ## License
 
