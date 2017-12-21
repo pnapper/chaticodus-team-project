@@ -28,6 +28,9 @@ display:inline-block;
 button {
   width:100px;
   color:black;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+
 }
 
 h5 {
