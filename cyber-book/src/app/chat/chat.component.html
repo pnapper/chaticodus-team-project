@@ -19,7 +19,7 @@
 
      <div class="chatmsg" *ngFor="let chat of chats | async | timestamp:'descending' | slice:0:16; let i = index">
        <h5>{{chat.alias}}:</h5>
-       <p>{{chat.message}}</p>
+       <p><i class="fa fa-comments" aria-hidden="true"></i>{{chat.message}}</p>
        <hr>
      </div>
    </div>

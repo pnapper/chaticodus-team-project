@@ -11,7 +11,6 @@
   background-repeat:none;
   background-attachment:fixed;
   color:white;
-  border-bottom:2px solid black;
 }
 
 h2 {
@@ -47,4 +46,9 @@ button {
   margin-bottom: 5px;
   margin-top: 5px;
   font-family: 'Raleway', sans-serif;
+}
+
+.fa-comments {
+  margin-right:5px;
+  color:black;
 }
