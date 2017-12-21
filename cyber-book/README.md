@@ -26,6 +26,8 @@ Add additional notes about how to deploy this on a live system
 * [Desk](https://www.multitable.com)
 * [Elevators](https://www.otisworldwide.com)
 * [Air Conditioning](https://en.wikipedia.org/wiki/Air_conditioning#Energy_transfer.com)
+* [Coffee](https://www.starbucks.com)
+* [Monster Energy Drink](https://www.monsterenergy.com)
 
 
 ## Versioning
