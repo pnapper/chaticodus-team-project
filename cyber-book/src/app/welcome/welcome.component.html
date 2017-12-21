@@ -4,29 +4,35 @@
   <div *ngIf="userId != null">
 
 
-        <div class="card">
-          <div class="card-header">
+
+            <button (click)="showPost()">Text</button>
             <button (click)="showMusic()">Music</button>
             <button (click)="showMovie()">Movie</button>
-          </div>
-          <div class="card-body">
+
+
+
             <div *ngIf="searchMusicShow">
               <app-music-post [childUser] = "userId" (CloseMusic)="CloseMusicSender($event)"></app-music-post>
             </div>
             <div *ngIf="searchMovieShow">
               <app-movie-post [childUser] = "userId" (CloseMovie)="CloseMovieSender($event)"></app-movie-post>
             </div>
-          </div>
-        </div>
+            <div *ngIf="searchPostShow">
+              <app-post [childUser] = "userId" (ClosePost)="ClosePostSender($event)"></app-post>
+            </div>
 
 
-      <div class="feedleft">
+
+
+      <div class="feedwrapper">
+        <div class="feedleft">
         <app-feed></app-feed>
       </div>
-      <div class="chatright">
 
+      <div class="feedright">
         <app-chat [childUser] = "userId"></app-chat>
       </div>
+
     </div>
   </div>
 

@@ -33,7 +33,7 @@ export class SearchComponent implements OnInit {
   }
 
   postMusicSearch(username: string, status: string){
-    let musicPost = new Posts(username, this.type, status, this.responses);
+    let musicPost = new Posts(username, this.type, status, this.responses, Date.now());
     this.feedService.addPost(musicPost);
     this.childValue[1] = false;
     this.responses = [];

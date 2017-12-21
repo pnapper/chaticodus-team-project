@@ -34,7 +34,7 @@ export class SearchMovieComponent implements OnInit {
   }
 
   postMovieSearch(username: string, status: string){
-    let moviePost = new Posts(username, this.type, status, this.responses);
+    let moviePost = new Posts(username, this.type, status, this.responses, Date.now());
     this.feedService.addPost(moviePost);
     this.childValue[1] = false;
     this.responses = [];

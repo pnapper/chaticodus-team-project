@@ -25,15 +25,10 @@ export class ChatComponent implements OnInit {
     this.chats = this.chatService.getChats();
   }
 
-  // submitForm(title: string) {
-  //   var newChat: Chat = new Chat(this.childUser, title);
-  //   this.chatService.addChat(newChat);
-  // }
-
   postMessage(event) {
     event.preventDefault();
     let message = event.target.elements[0].value;
-    var newChat: Chat = new Chat(this.childUser, message);
+    var newChat: Chat = new Chat(this.childUser, message, Date.now());
     this.chatService.addChat(newChat);
   }
 

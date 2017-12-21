@@ -1,17 +1,26 @@
 .posts {
   margin-top:100px;
-
 }
 
-.chatright {
-  position:absolute;
+
+.feedleft {
+display:inline-block;
+  width:79%;
+}
+
+.feedright {
   width:20%;
   display:inline-block;
   float:right;
-  margin-top:65px;
+  margin-top:69px;
+  height:100%;
 }
 
-.feedleft {
-  float:left;
-  width:80%;
+.card {
+  border:0;
+}
+
+.card-header {
+  padding:0;
+  margin:0;
 }
