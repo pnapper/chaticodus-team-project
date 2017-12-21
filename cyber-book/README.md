@@ -1,28 +1,39 @@
-# CyberBook
+# chaticodus
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+Using what we have learned for JavaScript, we created a social media platform called "The Cyber Book". Its purpose is to connect users around the world and allow them to see each other's posts as well as a few other functions. Think of it as a combination between Twitter, Tumblr, and Facebook.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Prerequisites
 
-## Code scaffolding
+* An HTML writer (In our case, Atom.io)
+* A basic understanding of JavaScript
+* An internet browser that is capable of reading HTML and JavaScript
+* A Github Account
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+## Deployment
 
-## Build
+Add additional notes about how to deploy this on a live system
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Built With
 
-## Running unit tests
+* [Atom](http://atom.io)
+* [Firebase](https://firebase.google.com/)
+* [Github](https://www.github.com)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Versioning
 
-## Running end-to-end tests
+1.0.0
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+## Authors
 
-## Further help
+* **Hansen**
+* **Daniel**
+* **Isaac**
+* **Sanyee**
+* **Sravy**
+* **Patrick**
+* **Gyles**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## License
+
+This project is licensed under the MIT License
