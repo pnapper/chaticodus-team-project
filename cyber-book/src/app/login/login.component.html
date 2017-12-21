@@ -1,6 +1,8 @@
-<br><br><br><br><br><br><br><br><br><br>
+<div class="login">
+  <div class="chaticodusimage">
+  <img src="assets/images/chaticodus3.png" width=450px;>
+</div>
 
-<button class="btn" routerLink="signup">Create New Account</button>
 
 <div class="row columns">
   <!-- <button class="btn" (click)="login()" *ngIf="!(user | async)?.uid">Anonymous Login</button> -->
@@ -12,22 +14,24 @@
       <p *ngFor="let item of items | async">{{item.message}}</p>
   </div>
 </div>
-<div class="sign-in">
+<div class="loginform">
+
   <h3>Log in to existing account:</h3>
   <form (submit)="loginUser($event)">
     <div class="input">
       <label>Email:</label>
-      <input type="text">
+      <input class="form-control" type="text">
     </div>
     <div class="input">
       <label>Password:</label>
-      <input type="password">
+      <input class="form-control" type="password">
     </div>
     <div class="input">
 
       <!-- <a routerLink="../feed"><button class="btn" type="submit">Login</button></a> -->
       <!-- <button class="btn" routerLink="../feed" type="submit">Login</button> -->
-      <button class="btn" type="submit">Login</button>
+      <button class="btn btn-primary" type="submit">Login</button>
+      <button class="btn btn-primary" routerLink="signup">Create New Account</button>
 
     </div>
   </form>

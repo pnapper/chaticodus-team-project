@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
         this.userId = this.realuser.email;
       }
     }).catch(function(error) {
-      console.log(error.message);
+      alert(error.message);
     });
 
   }
